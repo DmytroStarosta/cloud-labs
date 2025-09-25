@@ -5,6 +5,7 @@ apavelchak@gmail.com
 """
 
 import os
+import pymysql
 from http import HTTPStatus
 import secrets
 from typing import Dict, Any
@@ -23,7 +24,7 @@ MYSQL_ROOT_PASSWORD = "MYSQL_ROOT_PASSWORD"
 
 # Database
 db = SQLAlchemy()
-
+pymysql.install_as_MySQLdb()
 todos = {}
 
 
